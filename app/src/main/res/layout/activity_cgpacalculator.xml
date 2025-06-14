@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CGPACalculator">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <LinearLayout
+            android:id="@+id/courseContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_calculate_24"
+                android:layout_gravity="center"
+                app:tint="@color/dark_blue" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_blue"
+                android:text="@string/cgpa_calculator"
+                android:layout_gravity="center"
+                android:textSize="30sp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-black"/>
+            <Button
+                android:id="@+id/addCourseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/ic_add_circle_outline_24"
+                android:text="@string/add_course" />
+
+            <Button
+                android:id="@+id/calculateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/calculate_cgpa"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_cgpa"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

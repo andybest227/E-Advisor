@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CareerGuide">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="20dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_career_guide_2"
+                android:layout_gravity="center_horizontal"
+                app:tint="@color/dark_red" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="@string/career_guide"
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                android:textColor="@color/dark_blue"
+                android:textSize="30sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_coners_white"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_red"
+                    android:text="@string/ability_qualification"
+                    />
+                <Spinner
+                    android:id="@+id/qualifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/dark_red"
+                    android:text="@string/course_of_study"
+                    />
+                <Spinner
+                    android:id="@+id/courseOfStudy"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rounded_corner"
+                    android:layout_marginTop="5dp" />
+
+                <Button
+                    android:id="@+id/btnCareer"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/get_career_guide"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/dark_blue"
+                    android:textColor="@android:color/white" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/careerRecycleView"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

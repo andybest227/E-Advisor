@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">E-Advisor</string>
+    <string name="todo">TODO</string>
+    <string name="login_welcome">Welcome back</string>
+    <string name="login_subtitle">NACEST E-Advisor</string>
+    <string name="email_address">Email Address</string>
+    <string name="password_field">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="login_btbTxt">Login</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_chat">Chat</string>
+    <string name="logout">Logout</string>
+    <string name="title_settings">Settings</string>
+    <string name="ready_to_excel">Ready to Excel?</string>
+    <string name="nacest_advisor_is_here_for_you">NACEST Advisor is here…</string>
+    <string name="exam_tips">Exam Tips</string>
+    <string name="course_guide">Course Choice</string>
+    <string name="career_guide">Career Guide</string>
+    <string name="material_guide">Material</string>
+    <string name="cgpa_cal">CGPA</string>
+    <string name="about_e_advisor">  About E-Advisor</string>
+    <string name="nacest_website">NACEST official website…</string>
+    <string name="month_year">Month Year</string>
+    <string name="next">Next</string>
+    <string name="prev">Prev</string>
+    <string name="admin_privilege">Admin Privileges</string>
+    <string name="type_a_message">Type a message…</string>
+    <string name="send">Send</string>
+    <string name="register">Register</string>
+    <string name="interests_comma_separated">Interests (comma-separated)</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="user_registration">User Registration</string>
+    <string name="create_account">Create Account</string>
+    <string name="role">Role: </string>
+    <string name="level">Level:</string>
+    <string name="select_academic">-select academic level-</string>
+    <string name="select_qualification">-select academic qualification-</string>
+    <string name="courseOfStudy">-select course of study-</string>
+    <string name="please_wait">Please wait…\n</string>
+    <string name="pick_your_interests">Pick your interests below</string>
+    <string-array name="roles_array">
+        <item>student</item>
+        <item>admin</item>
+    </string-array>
+
+    <string-array name="academic_levels_array">
+        <item>-select academic level-</item>
+        <item>Pre-ND</item>
+        <item>ND</item>
+        <item>HND</item>
+        <item>PGD</item>
+    </string-array>
+    <string name="title_activity_exams_tips">ExamsTips</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_transform">Transform</string>
+    <string name="menu_reflow">Reflow</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="lorem_ipsum_title">Lorem Ipsum"</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply placeholder text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry\'s standard placeholder text ever
+        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+        type specimen book"
+    </string>
+    <string name="fab_content_description">Represents a view to invoke an action</string>
+    <string name="image_view_item_transform_content_description">Represents an image view in the
+        item
+    </string>
+    <string name="get_tips">Get Tips</string>
+    <string name="select_interest">Select all areas you want to improve in</string>
+    <string name="course_recommendations">Course Recommendation</string>
+    <string name="select_skills">Select you skills</string>
+    <string name="get_recommendation">Get Recommendation</string>
+    <string name="get_career_guide">Get Career Guide</string>
+    <string name="ability_qualification">Ability/Qualification</string>
+    <string name="course_of_study">Course of Study</string>
+    <string name="more_details">more details</string>
+    <string name="select_a_course">Select a course</string>
+    <string name="get_material">Get Material</string>
+    <string name="cgpa_calculator">CGPA Calculator</string>
+    <string name="add_course">Add Course</string>
+    <string name="calculate_cgpa">Calculate CGPA</string>
+    <string name="your_cgpa">Your CGPA:</string>
+    <string name="grade_a_f">Grade (A-F)</string>
+    <string name="unit">Unit</string>
+    <string name="remove_row">Remove row</string>
+    <string name="units">Units</string>
+    <string name="remove">Remove</string>
+    <string name="drop_a_message">Chat Advisor</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="required_all">NOTE: All input fields are required</string>
+    <string name="submit">Submit</string>
+</resources>
