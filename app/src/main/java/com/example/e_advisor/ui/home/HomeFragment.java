@@ -9,19 +9,24 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
+import com.auth0.android.jwt.JWT;
+import com.example.e_advisor.AddCourse;
+import com.example.e_advisor.AddExamTip;
 import com.example.e_advisor.CGPACalculator;
 import com.example.e_advisor.CareerGuide;
 import com.example.e_advisor.CourseRecommendation;
@@ -30,6 +35,7 @@ import com.example.e_advisor.LoginActivity;
 import com.example.e_advisor.Material;
 import com.example.e_advisor.R;
 import com.example.e_advisor.databinding.FragmentHomeBinding;
+import com.example.e_advisor.utils.Token;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.time.LocalDate;
@@ -44,7 +50,6 @@ public class HomeFragment extends Fragment {
     private GridLayout calendarGrid;
     private TextView monthYearText;
     private GestureDetector gestureDetector;
-    private Button examsTip, courseRecommendation, careerGuide, material_button, cgpa_cal, btnLogout;
     private SharedPreferences sharedPreferences;
     private static final String PREF_NAME = "e_advisor";
     private LocalDate selectedDate;
@@ -59,16 +64,31 @@ public class HomeFragment extends Fragment {
         monthYearText = root.findViewById(R.id.month_year_text);
         Button btnPrev = root.findViewById(R.id.btn_prev);
         Button btnNext = root.findViewById(R.id.btn_next);
-        examsTip = root.findViewById(R.id.examsTips);
-        courseRecommendation = root.findViewById(R.id.courseRecommendation);
-        careerGuide = root.findViewById(R.id.careerGuide);
-        material_button = root.findViewById(R.id.material_button);
-        cgpa_cal = root.findViewById(R.id.cgpa_cal);
-        btnLogout = root.findViewById(R.id.btnLogout);
+        Button examsTip = root.findViewById(R.id.examsTips);
+        Button courseRecommendation = root.findViewById(R.id.courseRecommendation);
+        Button careerGuide = root.findViewById(R.id.careerGuide);
+        Button material_button = root.findViewById(R.id.material_button);
+        Button cgpa_cal = root.findViewById(R.id.cgpa_cal);
+        Button btnLogout = root.findViewById(R.id.btnLogout);
+        Spinner adminSpinner = root.findViewById(R.id.custom_spinner);
         View calendarContainer = root.findViewById(R.id.cal_container);
 
         sharedPreferences = requireActivity().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        JWT jwt = new JWT(Token.getInstance().getToken());
+        String role = jwt.getClaim("role").asString();
+        if (Objects.equals(role, "admin")){
+            adminSpinner.setVisibility(View.VISIBLE);
+        }
 
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                requireContext(),
+                R.layout.admin_spinner_item,
+                getResources().getStringArray(R.array.admin_privileges)
+        );
+
+        adapter.setDropDownViewResource(R.layout.admin_spinner_item);
+        adminSpinner.setAdapter(adapter);
 
         examsTip.setOnClickListener(view -> {
             Intent examsTipsIntent = new Intent(requireContext(), ExamsTips.class);
@@ -108,6 +128,27 @@ public class HomeFragment extends Fragment {
 
             // Close the current activity
             requireActivity().finish();
+        });
+
+        //set on item select for admin spinner
+        adminSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selectedItem = adapterView.getItemAtPosition(i).toString();
+                if (selectedItem.equals("Add Exam Tip")){
+                    Intent examTipIntent = new Intent(getContext(), AddExamTip.class);
+                    startActivity(examTipIntent);
+                }
+                if (selectedItem.equals("Add Course")){
+                    Intent courseIntent = new Intent(getContext(), AddCourse.class);
+                    startActivity(courseIntent);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
         });
 
 

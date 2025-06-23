@@ -161,27 +161,39 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
                 android:paddingEnd="20dp">
-                <Button
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAllCaps="false"
-                    android:textAlignment="textStart"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:textColor="@color/white"
-                    android:background="@drawable/rounded_purple_gradient"
-                    android:drawableStart="@drawable/ic_check_circle"
-                    android:drawablePadding="8dp"
-                    android:text="@string/admin_privilege"/>
+                    android:layout_marginBottom="15dp"
+                    >
+                    <Spinner
+                        android:id="@+id/custom_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@drawable/spinner_background"
+                        android:paddingEnd="16dp"
+                        android:paddingStart="16dp"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:contentDescription="@string/todo"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_arrow_drop_down_24"
+                        app:tint="@color/gray" />
+                </RelativeLayout>
                 <Button
                     android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:textAllCaps="false"
-                    android:textAlignment="textStart"
                     android:paddingStart="20dp"
                     android:paddingEnd="10dp"
                     android:textColor="@color/white"
+                    android:layout_marginBottom="15dp"
                     android:background="@drawable/rounded_purple_gradient"
                     android:drawableStart="@drawable/ic_about"
                     android:drawablePadding="8dp"

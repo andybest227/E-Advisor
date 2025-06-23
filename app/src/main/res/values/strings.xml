@@ -101,4 +101,18 @@
     <string name="reset_password">Reset Password</string>
     <string name="required_all">NOTE: All input fields are required</string>
     <string name="submit">Submit</string>
+    <string name="add_exam_tip">Add Exam Tip</string>
+    <string name="tip_title">Enter Tip Title</string>
+    <string name="explain_tip">Explain this tip</string>
+    <string name="tip_tags">Tip tags (Separate tips with a comma)</string>
+    <string name="title">Title</string>
+    <string name="course_description">Course description</string>
+    <string name="course_tags">Course tags (Separate with a comma)</string>
+    <array name="admin_privileges">
+        <item>Admin Privileges</item>
+        <item>Add Exam Tip</item>
+        <item>Add Course</item>
+        <item>Add Career</item>
+        <item>Add Material</item>
+    </array>
 </resources>
