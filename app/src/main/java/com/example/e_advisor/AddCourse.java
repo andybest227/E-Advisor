@@ -64,15 +64,13 @@ public class AddCourse extends AppCompatActivity {
                     return;
                 }
             }
+            title = courseTitleEditText.getText().toString().trim();
+            description = descriptionEditText.getText().toString().trim();
+            tags =tagsEditText.getText().toString().trim();
+
+            AsyncPostTask<CreateCourseRequestObject> postTask = asyncPostTask();
+            postTask.execute(apiAddress.api_address()+"/api/auth/courses/");
         });
-
-        title = courseTitleEditText.getText().toString().trim();
-        description = descriptionEditText.getText().toString().trim();
-        tags =tagsEditText.getText().toString().trim();
-
-        AsyncPostTask<CreateCourseRequestObject> postTask = asyncPostTask();
-        postTask.execute(apiAddress.api_address()+"/api/auth/courses/");
-
     }
 
 
