@@ -25,6 +25,7 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import com.auth0.android.jwt.JWT;
+import com.example.e_advisor.AddCareer;
 import com.example.e_advisor.AddCourse;
 import com.example.e_advisor.AddExamTip;
 import com.example.e_advisor.CGPACalculator;
@@ -142,6 +143,10 @@ public class HomeFragment extends Fragment {
                 if (selectedItem.equals("Add Course")){
                     Intent courseIntent = new Intent(getContext(), AddCourse.class);
                     startActivity(courseIntent);
+                }
+                if (selectedItem.equals("Add Career")){
+                    Intent addCareerIntent = new Intent(getContext(), AddCareer.class);
+                    startActivity(addCareerIntent);
                 }
             }
 

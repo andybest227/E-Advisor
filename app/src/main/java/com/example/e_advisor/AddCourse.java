@@ -32,7 +32,7 @@ public class AddCourse extends AppCompatActivity {
     private String title, description, tags;
     private Dialog progress_dialog;
     Gson gson = new Gson();
-    private APIAddress apiAddress = new APIAddress();
+    private final APIAddress apiAddress = new APIAddress();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

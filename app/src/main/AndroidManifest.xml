@@ -16,6 +16,9 @@
         android:theme="@style/Theme.EAdvisor.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".AddCareer"
+            android:exported="false" />
+        <activity
             android:name=".AddCourse"
             android:exported="false" />
         <activity

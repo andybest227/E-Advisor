@@ -108,11 +108,19 @@
     <string name="title">Title</string>
     <string name="course_description">Course description</string>
     <string name="course_tags">Course tags (Separate with a comma)</string>
+    <string name="describe_this_career">Describe this career...</string>
+    <string name="tags">Tags (seperate with a comma)</string>
+    <string name="tips">Tips (seperate with a comma)</string>
+    <string name="create_career">Create Career</string>
     <array name="admin_privileges">
         <item>Admin Privileges</item>
         <item>Add Exam Tip</item>
         <item>Add Course</item>
         <item>Add Career</item>
         <item>Add Material</item>
+    </array>
+    <array name="qualifications">
+        <item>B.Sc/HND</item>
+        <item>NCE/ND</item>
     </array>
 </resources>
